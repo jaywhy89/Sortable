@@ -2,28 +2,23 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.File;
 import java.io.IOException;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+import java.util.ArrayList;
+import java.awt.List;
+
 
 public class Sortable {
 	public static void main(String[] args) {
 
-		//Open Products file
+		// Path of JSON Input files
 		String productFile = "./p.txt";
-		BufferedReader br = null;
-		
-		try{
-			br = new BufferedReader(new FileReader(new File(productFile)));
-			String jsonObj = null;
-			while ((jsonObj=br.readLine()) != null) {
-				System.out.println(jsonObj);
-			}
-		}
-		catch (IOException ex) {
-			ex.printStackTrace();
-		}
+		String listngFile = "./l.txt";
+		Product product = new Product();
+		product.setProductName("YOLO");
+		System.out.println(product.getProductName());
+		//List<Product> productList = new ArrayList<Product>();
+
+		JsonReader jj = new JsonReader("EEE");
+		System.out.println(jj.file);
 
 	}
 }
