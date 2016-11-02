@@ -3,22 +3,24 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.awt.List;
+import java.util.List;
 
 
 public class Sortable {
 	public static void main(String[] args) {
 
 		// Path of JSON Input files
-		String productFile = "./p.txt";
-		String listngFile = "./l.txt";
-		Product product = new Product();
-		product.setProductName("YOLO");
-		System.out.println(product.getProductName());
-		//List<Product> productList = new ArrayList<Product>();
+		// String productFile = "./p.txt";
+		// String listingFile = "./l.txt";
 
-		JsonReader jj = new JsonReader("EEE");
-		System.out.println(jj.file);
+		String productFile = "./products.txt";
+		String listingFile = "./listings.txt";
+
+		ListingReader listingReader = new ListingReader(listingFile);
+		ProductReader productReader = new ProductReader(productFile);
+
+		List<Listing> listing = listingReader.getListing();
+		List<Product> product = productReader.getProduct();
 
 	}
 }

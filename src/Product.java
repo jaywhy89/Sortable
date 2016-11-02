@@ -6,8 +6,8 @@ public class Product {
 	private String announcedDate;
 
 	public Product() {
-		//Set family to blank, since it is optional
-		this.family = "";
+		// family is optional, so set to empty string in case of NULL
+		family = "";
 	}
 	
 	public String getProductName() {
@@ -34,19 +34,19 @@ public class Product {
 		this.productName = name;
 	}
 
-	public void getManufacturer(String manufacturer) {
+	public void setManufacturer(String manufacturer) {
 		this.manufacturer = manufacturer;
 	}
 
-	public void getFamily(String family) {
+	public void setFamily(String family) {
 		this.family = family;
 	}
 
-	public void getModel(String model) {
+	public void setModel(String model) {
 		this.model = model;
 	}
 
-	public void getAnnouncedDate(String date) {
+	public void setAnnouncedDate(String date) {
 		this.announcedDate = date;
 	}
 

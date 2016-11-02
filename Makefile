@@ -19,4 +19,4 @@ clean:
 	$(RM) $(BIN)*.*
 
 run: 
-	java -cp $(BIN) Sortable
+	java -cp "./bin/:./lib/*" Sortable
