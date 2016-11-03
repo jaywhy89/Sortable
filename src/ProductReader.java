@@ -7,6 +7,8 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+// ProductReader class to import products.txt
+
 public class ProductReader {
 	FileReader fileReader;
 	BufferedReader bufferedReader;
@@ -23,17 +25,19 @@ public class ProductReader {
 			while ((obj=bufferedReader.readLine()) != null) {
 				jsonObj = (JSONObject) new JSONParser().parse(obj);
 				Product item = new Product();
+
+				// Initialize Product class properties
 				item.setProductName((String)jsonObj.get("product_name"));
 				item.setManufacturer(StringFilter.filter((String)jsonObj.get("manufacturer")));
 				item.setFamily(StringFilter.filter((String)jsonObj.get("family")));
-				item.setModel(StringFilter.filter((String)jsonObj.get("model")));
+				item.setModel((String)jsonObj.get("model"));
 				item.setAnnouncedDate((String)jsonObj.get("announced-date"));
 
 				productList.add(item);
 			}
 
 			bufferedReader.close();
-			System.out.println("\nFinished importing products.txt");
+			System.out.println("\nFinished importing /inputfile/products.txt");
 		}
 		catch (IOException ex) {
 			ex.printStackTrace();

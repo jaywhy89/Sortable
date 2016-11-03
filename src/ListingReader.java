@@ -7,6 +7,8 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+// ListingReader class to import listings.txt
+
 public class ListingReader {
 	FileReader fileReader;
 	BufferedReader bufferedReader;
@@ -23,6 +25,8 @@ public class ListingReader {
 			while ((obj=bufferedReader.readLine()) != null) {
 				jsonObj = (JSONObject) new JSONParser().parse(obj);
 				Listing item = new Listing();
+
+				// Initialize Listing class properties
 				item.setTitle((String)jsonObj.get("title"));
 				item.setManufacturer((String)jsonObj.get("manufacturer"));
 				item.setCurrency((String)jsonObj.get("currency"));
@@ -30,7 +34,7 @@ public class ListingReader {
 				listingList.add(item);
 			}
 
-			System.out.println("Finished importing listings.txt");
+			System.out.println("Finished importing ./inputfile/listings.txt");
 
 			bufferedReader.close();
 		}

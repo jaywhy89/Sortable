@@ -1,3 +1,5 @@
+// Listing class 
+
 public class Listing {
 	private String title;
 	private String manufacturer;

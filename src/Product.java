@@ -1,3 +1,5 @@
+// Product class
+
 public class Product {
 	private String productName;
 	private String manufacturer;
@@ -6,7 +8,8 @@ public class Product {
 	private String announcedDate;
 
 	public Product() {
-		// family is optional, so set to empty string in case of NULL
+		// family parameter is optional in JSON input
+		// Initialize empty string in case of NULL
 		family = "";
 	}
 	
