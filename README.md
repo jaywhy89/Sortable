@@ -12,25 +12,24 @@ git clone https://github.com/jaywhy89/Sortable.git
 or click [here](https://github.com/jaywhy89/Sortable)
 
 ## Running the tests
-1.  After cloning,
+
+#1.  After cloning,
 ```
 cd Sortable
 ```
-
-2.  Type blow to <b>compile</b>
+#2.  Type blow to <b>compile</b>
 ```
 make
 ```
-3.  Type below to <b>run</b>
+#3.  Type below to <b>run</b>
 ```
 make run
 ```
-4.  Type below to <b>delete</b> output and binary files
+#4.  Type below to <b>delete</b> output and binary files
 ```
 make clean
 ```
-
-5.  Open <b>"results.txt"</b> to check output in JSON format.
+#5.  Open <b>"results.txt"</b> to check output in JSON format.
 
 
 ## Built With
