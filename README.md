@@ -25,7 +25,7 @@ Type below to <b>run</b>
 ```
 make run
 ```
-Type below to <b>clean</b>
+Type below to <b>delete</b> output and binary files
 ```
 make clean
 ```
