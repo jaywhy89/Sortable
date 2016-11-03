@@ -34,7 +34,7 @@ public class ListingReader {
 				listingList.add(item);
 			}
 
-			System.out.println("Finished importing ./inputfile/listings.txt");
+			System.out.println("Finished importing /inputfile/listings.txt");
 
 			bufferedReader.close();
 		}

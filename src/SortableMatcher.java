@@ -94,7 +94,7 @@ public class SortableMatcher {
 		System.out.println("\n\t\t\tFound "+Sortable.strongMatch+" STRONG matches.");
 		System.out.println("\n\t\t\tFound "+Sortable.possibleMatch+" POSSIBLE matches.");
 		
-		System.out.println("\n\t\t\t\t[Matching Finished.]\n");
+		System.out.println("\n[Matching Finished.]\n");
 		System.out.print("\nProgram found total of "+(Sortable.perfectMatch+Sortable.strongMatch+Sortable.possibleMatch)+" matches.");
 
 		return resultMap;

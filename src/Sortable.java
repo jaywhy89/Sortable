@@ -1,7 +1,3 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -16,6 +12,7 @@ public class Sortable {
 	static int possibleMatch = 0;
 
 	public static void main(String[] args) {
+		System.out.println("\nPlease allow 1-2 minutes for code to excute (varies on system config).");
 
 		long startTime = System.currentTimeMillis();
 		
