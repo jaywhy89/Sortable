@@ -17,19 +17,19 @@ After cloning,
 cd Sortable
 ```
 
-Type blow to compile
+Type blow to <b>compile</b>
 ```
 make
 ```
-Type below to run
+Type below to <b>run</b>
 ```
 make run
 ```
-Type below to clean
+Type below to <b>clean</b>
 ```
 make clean
 ```
-Open "results.txt" to check output
+Open <b>"results.txt"<b> to check output in JSON format.
 
 ## Built With
 
