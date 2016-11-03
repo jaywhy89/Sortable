@@ -28,13 +28,12 @@ To <b>run</b>,
 make run
 ```
 
+Open <b>"results.txt"</b> to check output in JSON format.
+
 To <b>delete</b> output and binary files,
 ```
 make clean
 ```
-
-Open <b>"results.txt"</b> to check output in JSON format.
-
 
 ## Built With
 
