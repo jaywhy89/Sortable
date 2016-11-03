@@ -13,27 +13,27 @@ or click [here](https://github.com/jaywhy89/Sortable)
 
 ## Running the tests
 
-1.  After cloning,
+1  After cloning,
 ```
 cd Sortable
 ```
 
-1. Type blow to <b>compile</b>
+2  Type blow to <b>compile</b>
 ```
 make
 ```
 
-1. Type below to <b>run</b>
+3  Type below to <b>run</b>
 ```
 make run
 ```
 
-1. Type below to <b>delete</b> output and binary files
+4  Type below to <b>delete</b> output and binary files
 ```
 make clean
 ```
 
-1.  Open <b>"results.txt"</b> to check output in JSON format.
+5  Open <b>"results.txt"</b> to check output in JSON format.
 
 
 ## Built With
