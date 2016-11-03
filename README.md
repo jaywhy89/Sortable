@@ -29,7 +29,7 @@ Type below to <b>clean</b>
 ```
 make clean
 ```
-Open <b>"results.txt"<b> to check output in JSON format.
+Open <b>"results.txt"</b> to check output in JSON format.
 
 ## Built With
 
