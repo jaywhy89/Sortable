@@ -18,17 +18,17 @@ After cloning,
 cd Sortable
 ```
 
-Type blow to <b>compile</b>
+Type below to <b>compile</b>
 ```
 make
 ```
 
-Type below to <b>run</b>
+To <b>run</b>,
 ```
 make run
 ```
 
-Type below to <b>delete</b> output and binary files
+To <b>delete</b> output and binary files,
 ```
 make clean
 ```
