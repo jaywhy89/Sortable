@@ -24,15 +24,16 @@ public class ProductReader {
 				jsonObj = (JSONObject) new JSONParser().parse(obj);
 				Product item = new Product();
 				item.setProductName((String)jsonObj.get("product_name"));
-				item.setManufacturer((String)jsonObj.get("manufacturer"));
-				item.setFamily((String)jsonObj.get("family"));
-				item.setModel((String)jsonObj.get("model"));
+				item.setManufacturer(Sortable.filter((String)jsonObj.get("manufacturer")));
+				item.setFamily(Sortable.filter((String)jsonObj.get("family")));
+				item.setModel(Sortable.filter((String)jsonObj.get("model")));
 				item.setAnnouncedDate((String)jsonObj.get("announced-date"));
 
 				productList.add(item);
 			}
 
 			bufferedReader.close();
+			System.out.println("\nFinished importing products.txt");
 		}
 		catch (IOException ex) {
 			ex.printStackTrace();

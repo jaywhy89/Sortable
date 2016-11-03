@@ -30,6 +30,8 @@ public class ListingReader {
 				listingList.add(item);
 			}
 
+			System.out.println("Finished importing listings.txt");
+
 			bufferedReader.close();
 		}
 		catch (IOException ex) {

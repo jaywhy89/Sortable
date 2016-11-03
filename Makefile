@@ -16,7 +16,7 @@ classes:
 	$(COMPILE) $(SRC)
 
 clean: 
-	$(RM) $(BIN)*.*
+	$(RM) $(BIN)*.* result.txt
 
 run: 
 	java -cp "./bin/:./lib/*" Sortable
