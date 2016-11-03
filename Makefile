@@ -13,10 +13,11 @@ COMPILE = $(JCC) $(JFLAGS)
 default: classes
 
 classes: 
+	mkdir bin
 	$(COMPILE) $(SRC)
 
 clean: 
-	$(RM) $(BIN)*.* result.txt
+	$(RM) -rf $(BIN) result.txt
 
 run: 
 	java -cp "./bin/:./lib/*" Sortable

@@ -35,9 +35,5 @@ public class Listing {
 	public void setPrice(String price) {
 		this.price=price;
 	}
-
-	public String toString() {
-		return "\"title\":\""+title+"\",\"manufacturer\":\""+manufacturer+"\",\"currency\":\""+currency+"\",\"price\":\""+price+"\"";
-	}
 }
 

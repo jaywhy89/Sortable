@@ -11,6 +11,7 @@ import java.util.HashMap;
 public class Sortable {
 	static int perfectMatch = 0;
 	static int strongMatch = 0;
+	static int possibleMatch = 0;
 
 	public static void main(String[] args) {
 
@@ -26,8 +27,7 @@ public class Sortable {
 		List<Product> product = productReader.getProduct();
 		List<Listing> listing = listingReader.getListing();
 
-
-		Map<String,ArrayList<Listing>> resultSet = Matcher.matchItems(product, listing);
+		Map<String,ArrayList<Listing>> resultSet = SortableMatcher.matchItems(product, listing);
 
 		OutputWriter.generateOutput(resultSet);
 
