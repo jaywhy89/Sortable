@@ -8,6 +8,8 @@ import java.util.regex.Pattern;
 
 
 public class SortableMatcher {
+	static int totalMatch=0;
+	static int i=1000;
 
 	public synchronized static Map<String,ArrayList<Listing>> matchItems(List<Product> product, List<Listing> listing) {
 		System.out.println("\n[Starting Matching]\n");
@@ -34,10 +36,9 @@ public class SortableMatcher {
 				- Listing's title contains Produtc's model AND family
 		*/
 
-		System.out.print("Finding matches...");
+		System.out.println("Finding matches...\n");
 
 		for (Product p : product) {
-		
 			/* Initialize Product properties
 		  	    NOTE: productModel has 3 variants to increase matching case
 		  			1.LowerCase 
@@ -59,6 +60,7 @@ public class SortableMatcher {
 			Pattern pFamily = Pattern.compile("\\b"+productFamily+"\\b");
 
 			for (Listing l : listing) {
+
 				String listManufac = StringFilter.filter(l.getManufacturer());
 				String listTitle = StringFilter.filterB(l.getTitle());
 				Matcher mModel = pModel.matcher(listTitle);
@@ -87,17 +89,29 @@ public class SortableMatcher {
 				}
 			}
 			listing.removeAll(found);
+			totalMatch = Sortable.perfectMatch+Sortable.strongMatch+Sortable.possibleMatch;
+
+			// Display # of match found.  Comment out to reduce execution time
+			displayMatch();
 		}
 
 		// Print number of matches
-		System.out.println("\tFound "+Sortable.perfectMatch+" PERFECT matches.");
+		System.out.println("\n[Matching Finished]");
+		System.out.println("\n\t\t\tFound "+Sortable.perfectMatch+" PERFECT matches.");
 		System.out.println("\n\t\t\tFound "+Sortable.strongMatch+" STRONG matches.");
 		System.out.println("\n\t\t\tFound "+Sortable.possibleMatch+" POSSIBLE matches.");
 		
-		System.out.println("\n[Matching Finished.]\n");
-		System.out.print("\nProgram found total of "+(Sortable.perfectMatch+Sortable.strongMatch+Sortable.possibleMatch)+" matches.");
+		System.out.print("\nProgram found total of "+totalMatch+" matches.");
 
 		return resultMap;
+	}
+
+	// Display number of matches found in terms of 1000s
+	public static void displayMatch() {
+		if (totalMatch/i != 0) {
+			System.out.println("\t"+i+" matches found.");
+			i+=1000;
+		}
 	}
 }
 
